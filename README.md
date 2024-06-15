@@ -12,16 +12,13 @@ Welcome to the Nalanda Library Management System! This project aims to provide a
 ### Setup Instructions
 1. **Clone Repository**: Clone this repository to your local machine using the following command:
    ```
-   git clone <repository-url>
+   git clone <[repository-url](https://github.com/Ananthuak16/Nalanda_Library_Management.git)>
    ```
 2. **Install Dependencies**: Navigate to the project directory and install the dependencies using npm or yarn:
    ```
    npm install
    ```
-   or
-   ```
-   yarn install
-   ```
+
 3. **Environment Variables**: Create a `.env` file in the root directory and define the following environment variables:
    ```
    PORT=<port-number>
