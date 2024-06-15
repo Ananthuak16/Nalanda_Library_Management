@@ -7,7 +7,7 @@ Welcome to the Nalanda Library Management System! This project aims to provide a
 - Node.js
 - Express
 - MongoDB
-- AWS (optional)
+
 
 ### Setup Instructions
 1. **Clone Repository**: Clone this repository to your local machine using the following command:
@@ -86,12 +86,8 @@ Welcome to the Nalanda Library Management System! This project aims to provide a
 - **Book Availability**
   - Endpoint: `GET /api/borrow/bookAvailability`
   - Description: Provide a summary report of book availability.
- 
-  - 
-## AWS Deployment
- 
-The application is deployed and can be accessed [here](http://43.205.242.121:3200/).
 
-
+**Nalanda Library Management System API Documentation**
+ - http://localhost:3200/api-docs/
 
 
