@@ -1,0 +1,196 @@
+openapi: 3.0.0
+info:
+  title: Nalanda Library Management System API
+  description: API documentation for the Nalanda Library Management System
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+paths:
+  /users/:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: User successfully registered
+        '400':
+          description: Bad request
+  /users/auth:
+    post:
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Successful login. Returns JWT token.
+        '401':
+          description: Unauthorized
+  /books/add:
+    post:
+      summary: Add new book
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                author:
+                  type: string
+                ISBN:
+                  type: string
+                publicationDate:
+                  type: string
+                  format: date
+                genre:
+                  type: string
+                copies:
+                  type: integer
+      responses:
+        '201':
+          description: Book successfully added
+        '400':
+          description: Bad request
+  /books/update/{id}:
+    put:
+      summary: Update book details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                author:
+                  type: string
+                ISBN:
+                  type: string
+                publicationDate:
+                  type: string
+                  format: date
+                genre:
+                  type: string
+                copies:
+                  type: integer
+      responses:
+        '200':
+          description: Book details successfully updated
+        '404':
+          description: Book not found
+  /books/delete/{id}:
+    delete:
+      summary: Delete book
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Book successfully deleted
+        '404':
+          description: Book not found
+  /books/listBooks:
+    get:
+      summary: List books
+      responses:
+        '200':
+          description: Successfully retrieved list of books
+  /borrow:
+    post:
+      summary: Borrow book
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                bookId:
+                  type: string
+      responses:
+        '201':
+          description: Book successfully borrowed
+        '400':
+          description: Book out of stock or bad request
+  /return:
+    post:
+      summary: Return book
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                borrowId:
+                  type: string
+      responses:
+        '200':
+          description: Book successfully returned
+        '404':
+          description: Borrow record not found
+  /borrow/history/{userId}:
+    get:
+      summary: Borrow history
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved borrowing history
+  /mostBorrowed:
+    get:
+      summary: Most borrowed books
+      responses:
+        '200':
+          description: Successfully retrieved most borrowed books report
+  /mostActive:
+    get:
+      summary: Active members
+      responses:
+        '200':
+          description: Successfully retrieved active members report
+  /bookAvailability:
+    get:
+      summary: Book availability
+      responses:
+        '200':
+          description: Successfully retrieved book availability report
