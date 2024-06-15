@@ -8,6 +8,14 @@ Welcome to the Nalanda Library Management System! This project aims to provide a
 - Express
 - MongoDB
 
+### Admin credentials
+ ```
+  "email": "admin@example.com",
+  "password": "123"
+  
+ ```
+
+
 
 ### Setup Instructions
 1. **Clone Repository**: Clone this repository to your local machine using the following command:
