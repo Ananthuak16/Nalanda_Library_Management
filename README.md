@@ -37,11 +37,11 @@ Welcome to the Nalanda Library Management System! This project aims to provide a
 ### API Documentation
 #### User Management
 - **User Registration**
-  - Endpoint: `POST /api/users/register`
+  - Endpoint: `POST /api/users/`
   - Description: Register a new user with name, email, and password.
 
 - **User Login**
-  - Endpoint: `POST /api/users/login`
+  - Endpoint: `POST /api/users/auth`
   - Description: Authenticate user with email and password.
 
 #### Book Management
@@ -86,12 +86,12 @@ Welcome to the Nalanda Library Management System! This project aims to provide a
 - **Book Availability**
   - Endpoint: `GET /api/borrow/bookAvailability`
   - Description: Provide a summary report of book availability.
+ 
+  - 
+## AWS Deployment
+ 
+The application is deployed and can be accessed [here](http://43.205.242.121:3200/).
 
-### Deployment (Optional)
-- **AWS**: The application can be deployed on AWS using services like EC2 for hosting the server and MongoDB Atlas for database hosting. Provide the necessary deployment details in the README.
 
-### Version Control (Optional)
-- **BitBucket**: Use BitBucket for version control to maintain the project repository. Ensure meaningful commit messages and provide a well-maintained repository.
 
-### Submission
-Please submit your project as a Git repository link along with this README file containing setup instructions and any additional notes. If you choose to implement the optional tasks, include the necessary deployment and version control details in the README.
+
