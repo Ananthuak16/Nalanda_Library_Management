@@ -3,7 +3,7 @@ import asyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 import generateToken from "../Utils/generateToken.js";
 
-// @desc Authenticate user and set token
+// @Authenticate user and set token
 // @route POST /api/users/auth
 // @access Public
 const authUser = asyncHandler(async (req, res) => {
@@ -23,7 +23,7 @@ const authUser = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Register a new user
+// @Register a new user
 // @route POST /api/users
 // @access Public
 const registerUser = asyncHandler(async (req, res) => {
@@ -54,7 +54,7 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Logout user
+// @Logout user
 // @route POST /api/users/logout
 // @access Public
 const logoutUser = asyncHandler(async (req, res) => {
