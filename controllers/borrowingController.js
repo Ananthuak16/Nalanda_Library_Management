@@ -3,7 +3,7 @@ import asyncHandler from "express-async-handler";
 import Borrow from "../models/borrowingModel.js";
 import Book from "../models/bookModel.js";
 
-// @desc Borrow a book
+// @Borrow a book
 // @route POST /api/borrows
 // @access Public
 const BorrowBook = asyncHandler(async (req, res) => {
@@ -32,7 +32,7 @@ const BorrowBook = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Return a borrowed book
+// @Return a borrowed book
 // @route POST /api/borrows/return
 // @access Public
 const returnBook = asyncHandler(async (req, res) => {
@@ -56,7 +56,7 @@ const returnBook = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Get borrow history for a user
+// @Get borrow history for a user
 // @route GET /api/borrows/history/:userId
 // @access Public
 const borrowHistory = asyncHandler(async (req, res) => {
@@ -70,7 +70,7 @@ const borrowHistory = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Get most borrowed books
+// @Get most borrowed books
 // @route GET /api/borrows/most-borrowed
 // @access Public
 const mostBorrowedBooks = asyncHandler(async (req, res) => {
@@ -110,7 +110,7 @@ const mostBorrowedBooks = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Get most active members
+// @Get most active members
 // @route GET /api/borrows/most-active
 // @access Public
 const mostActiveMembers = asyncHandler(async (req, res) => {
@@ -150,7 +150,7 @@ const mostActiveMembers = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Get book availability
+// @Get book availability
 // @route GET /api/books/availability
 // @access Public
 const bookAvailability = asyncHandler(async (req, res) => {
