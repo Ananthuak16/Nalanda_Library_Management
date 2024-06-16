@@ -3,7 +3,7 @@ import asyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 import generateToken from "../Utils/generateToken.js";
 
-// @desc Auth admin/set token
+// @Auth admin/set token
 // @route POST /api/admin/auth
 // @access Public
 const authAdmin = asyncHandler(async (req, res) => {
@@ -27,7 +27,7 @@ const authAdmin = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Logout admin
+// @Logout admin
 // @route POST /api/admin/logout
 // @access Public
 const logoutAdmin = asyncHandler(async (req, res) => {
