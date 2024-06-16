@@ -2,7 +2,7 @@
 import asyncHandler from "express-async-handler";
 import Book from "../models/bookModel.js";
 
-// @desc Add a new book
+// @Add a new book
 // @route POST /api/books
 // @access Public
 const addNewBook = asyncHandler(async (req, res) => {
@@ -39,7 +39,7 @@ const addNewBook = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Update an existing book
+// @Update an existing book
 // @route PUT /api/books/:id
 // @access Public
 const updateBook = asyncHandler(async (req, res) => {
@@ -69,7 +69,7 @@ const updateBook = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Delete a book
+// @Delete a book
 // @route DELETE /api/books/:id
 // @access Public
 const deleteBook = asyncHandler(async (req, res) => {
@@ -81,7 +81,7 @@ const deleteBook = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc List books with pagination and filtering
+// @List books with pagination and filtering
 // @route GET /api/books
 // @access Public
 const listBooks = asyncHandler(async (req, res) => {
