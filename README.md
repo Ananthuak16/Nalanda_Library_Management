@@ -29,9 +29,10 @@ Welcome to the Nalanda Library Management System! This project aims to provide a
 
 3. **Environment Variables**: Create a `.env` file in the root directory and define the following environment variables:
    ```
-   PORT=<port-number>
-   MONGODB_URI=<mongodb-uri>
-   JWT_SECRET=<jwt-secret>
+  PORT=3200
+  mongoURL=mongodb+srv://ak:4GUuEUiMll5899IL@ak.qt4u900.mongodb.net/Nalanda_Library_Management
+  JWT_SECRET=your_jwt_secret_key
+
    ```
 4. **Run the Server**: Start the server by running the following command:
    ```
