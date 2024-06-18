@@ -6,7 +6,7 @@ info:
 servers:
   - url: http://localhost:3000/api
 paths:
-  /users/:
+  /users/register:
     post:
       summary: Register a new user
       requestBody:
@@ -27,7 +27,7 @@ paths:
           description: User successfully registered
         '400':
           description: Bad request
-  /users/auth:
+  /users/login:
     post:
       summary: User login
       requestBody:
