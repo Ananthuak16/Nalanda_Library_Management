@@ -6,8 +6,8 @@ import {
     logoutUser,
 } from "../controllers/userController.js";
 
-router.post('/', registerUser);
-router.post('/auth', authUser);
+router.post('/register', registerUser);
+router.post('/login', authUser);
 router.post('/logout', logoutUser);
 
 export default router;
