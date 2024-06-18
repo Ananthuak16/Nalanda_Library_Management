@@ -3,10 +3,10 @@ import asyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 import generateToken from "../Utils/generateToken.js";
 
-// @Authenticate user and set token
+// @~Authenticate user and set token
 // @route POST /api/users/auth
 // @access Public
-const authUser = asyncHandler(async (req, res) => {
+const loginUser = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
 
@@ -67,7 +67,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 
 // Export the functions
 export {
-    authUser,
+    loginUser,
     registerUser,
     logoutUser,
 };
